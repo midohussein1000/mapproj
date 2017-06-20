@@ -1,0 +1,113 @@
+.map-canvas {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+h1,h2 {
+  color: #054506;
+}
+
+h3 {
+  color: #066;
+    font-size: 1.2em;
+}
+
+.list {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 99;
+  width: 20vw;
+  height: 100%;
+  background-color: white;
+  opacity: .7;
+  padding-right: 15px;
+  padding-left:5px;
+  overflow: scroll;
+  border: 0.5px dotted gray;
+
+}
+
+.content {
+  width: 200px;
+}
+
+.thename{
+  cursor:pointer;
+}
+
+.insta {
+  z-index: 100;
+  color: red;
+}
+
+.ImgInstagram {
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  width: 306px;
+  height: 306px;
+  margin: 5px;
+}
+
+.photos {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  background-color: #ededed;
+  opacity: .9;
+  padding-left: 10px;
+  margin: 0 auto 0 auto;
+  visibility: hidden;
+  width: 70%
+}
+
+.instagramIcon{
+  text-align: center;
+  padding-left: 35%;
+  cursor: pointer
+}
+
+.photoTitle {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 36px;
+  padding: 20px;
+  font-weight: bold;
+  color: #066;
+}
+.ImgInstagram {
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  width: 306px;
+  height: 306px;
+  margin: 5px;
+}
+.closeInstagram {
+  font-family: sans-serif;
+  cursor: pointer;
+  float: right;
+  right: 30px;
+  padding-right: 20px;
+}
+#searchbox {
+    margin: 0px;
+    background-color: #fff;
+    padding: 0 11px 0 13px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
