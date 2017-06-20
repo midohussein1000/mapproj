@@ -7,6 +7,7 @@
 ** i checked out these References ** 
 http://jshint.com/
 http://stackoverflow.com/
+https://github.com/hadeernasr/Project5_Neighborhood_Map
 https://developers.google.com/maps/
 https://instagram.com/developer/?hl=en
 https://developers.google.com/maps/documentation/javascript/adding-a-google-map
