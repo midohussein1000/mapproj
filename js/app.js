@@ -6,7 +6,7 @@ var places = [{
         url: "http://www.Chick-fil.com",
         lat: "29.774813",
         lng: "-95.381082",
-        instagramTag: "Chick-fil"
+        instagramTag: "Chickfil"
     },
     {
         name: "Chili's Grill & Bar",
@@ -33,7 +33,7 @@ var places = [{
         url: "http://www.cadillacbar.com",
         lat: "29.776489",
         lng: "-95.408942",
-        instagramTag: "Cadillac Bar"
+        instagramTag: "CadillacBar"
     },
     {
         name: "Cyclone Anaya's Mexican Kitchen",
@@ -51,7 +51,7 @@ var places = [{
         url: "http://www.lupetortilla.com/",
         lat: "29.774598",
         lng: "-95.409831",
-        instagramTag: "Lupe Tortilla"
+        instagramTag: "LupeTortilla"
     }
 
 ];
