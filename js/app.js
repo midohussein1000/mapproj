@@ -6,7 +6,7 @@ var places = [{
         url: "http://www.Chick-fil.com",
         lat: "29.774813",
         lng: "-95.381082",
-        instagramTag: "Chickfil"
+        instagramTag: "Chick-fil"
     },
     {
         name: "Chili's Grill & Bar",
@@ -33,7 +33,7 @@ var places = [{
         url: "http://www.cadillacbar.com",
         lat: "29.776489",
         lng: "-95.408942",
-        instagramTag: "CadillacBar"
+        instagramTag: "Cadillac Bar"
     },
     {
         name: "Cyclone Anaya's Mexican Kitchen",
@@ -51,7 +51,7 @@ var places = [{
         url: "http://www.lupetortilla.com/",
         lat: "29.774598",
         lng: "-95.409831",
-        instagramTag: "LupeTortilla"
+        instagramTag: "Lupe Tortilla"
     }
 
 ];
@@ -115,6 +115,7 @@ var viewModel = function() {
 
         //loop through ko placeList to change infoWindow and add marker for each location as object in placeList.
         var i;
+        var infowindow = new google.maps.InfoWindow();
         for (i = 0; i < self.placeList().length; i++) {
 
             var streetViewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=200x200&location=' +
@@ -129,7 +130,7 @@ var viewModel = function() {
                 '<a href = "' + self.placeList()[i].url() + '" target="_blank">Website</a>' +
                 '<img src = "' + streetViewUrl + '">' +
                 '</div>';
-            var infowindow = new google.maps.InfoWindow({
+            infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
 
@@ -141,12 +142,26 @@ var viewModel = function() {
                 title: self.placeList()[i].name(),
                 icon: unselectedIcon
             });
+
             arrayOfMarkers.push(marker);
             //use event listner for click and closeclick
             google.maps.event.addListener(marker, "click", self.markerReset);
             google.maps.event.addListener(infowindow, "closeclick", self.markerReset);
 
+            contnt(marker, contentString, infowindow);
+        }
 
+        function contnt(marker, contentString, infoWindow) {
+
+            google.maps.event.addListener(marker, "click", function(e) {
+                infowindow.setContent(contentString);
+                infowindow.open(map, this);
+                self.currentLocation(this.title);
+                marker.setIcon(selectedIcon);
+                self.getInstagram();
+            });
+        }
+        /*
             google.maps.event.addListener(marker, "click", (function(marker, contentString, infoWindow) {
                 return function() {
                     infowindow.setContent(contentString);
@@ -156,7 +171,7 @@ var viewModel = function() {
                     self.getInstagram();
                 };
             })(marker, contentString, infowindow));
-        }
+        */
 
     };
 
